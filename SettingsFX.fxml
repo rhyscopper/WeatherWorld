@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" id="outside" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" fx:controller="WeatherWorld.SettingsFXController">
+   <children>
+      <HBox id="TitleArea" prefHeight="130.0" style="-fx-background-color: #B3B3B3;">
+         <children>
+             <Region prefHeight="212" prefWidth="330" >
+                 
+             </Region>
+             <Text fill="#FFFFFF" strokeType="OUTSIDE" text="Settings">
+                <font>
+                   <Font name="American Typewriter Bold" size="80" />
+                </font>
+                <HBox.margin>    
+                   <Insets bottom="10" left="20" top="20" right="20"/>  
+                </HBox.margin>
+             </Text>
+             <Region prefHeight="212" prefWidth="255" >
+                 
+             </Region>
+              <Button fx:id="CloseButton" text="Exit" prefWidth="60" prefHeight="40" onAction="#Donebutton">
+                <HBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+                </HBox.margin>
+                <font>
+                   <Font name="American Typewriter Bold" size="16" />
+                </font>
+              </Button>
+         </children>
+      </HBox>
+      <HBox id="Center" prefHeight="475.0" prefWidth="1025.0" >
+             <VBox prefHeight="100">
+                     <HBox>
+                        <children>
+                            <Region prefWidth="130" >
+                 
+                            </Region>
+                            <Text fill="black" strokeType="OUTSIDE" text="Location">
+                                <font>
+                                   <Font name="American Typewriter Bold" size="40" />
+                                </font>
+                                <HBox.margin>    
+                                   <Insets bottom="10" left="20" top="20" right="20"/>  
+                                </HBox.margin>
+                             </Text>
+                             <Region prefWidth="170" >
+                 
+                             </Region>
+                             <Text fill="black" strokeType="OUTSIDE" text="Temperature Unit">
+                                <font>
+                                   <Font name="American Typewriter Bold" size="40" />
+                                </font>
+                                <HBox.margin>    
+                                   <Insets bottom="10" left="20" top="20" right="20"/>  
+                                </HBox.margin>
+                             </Text>
+                        </children>
+                     </HBox>
+                     <HBox prefWidth="137.5">
+                        <children>
+                            <HBox>
+                                    <fx:define>
+                                        <ToggleGroup fx:id="myToggleGroup"/>
+                                    </fx:define>
+                                <children>
+                                    <Region prefWidth="35" >
+                 
+                                    </Region>
+                                    <RadioButton fx:id="london" text="London,UK" toggleGroup="$myToggleGroup" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>   
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                    <Region prefWidth="25" >
+                 
+                                    </Region>
+                                    <RadioButton fx:id="newyork" text="New York,USA" toggleGroup="$myToggleGroup" selected="false">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                    <Region prefWidth="25" >
+                 
+                                    </Region>
+                                    <RadioButton fx:id="paris" text="Paris,FR" toggleGroup="$myToggleGroup" selected="false">
+                                           <HBox.margin>
+                                               <Insets top="25.0" />
+                                            </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                            <HBox>
+                                    <fx:define>
+                                        <ToggleGroup fx:id="Degree"/>
+                                    </fx:define>
+                                <children>
+                                    <Region prefWidth="200" >
+                 
+                                    </Region>
+                                    <RadioButton text="°C" toggleGroup="$Degree" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>   
+                                           <font>
+                                               <Font name="AppleGothic Regular bold" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                    <Region prefWidth="75" >
+                 
+                                    </Region>
+                                    <RadioButton text="°F" toggleGroup="$Degree" selected="false">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                </children>
+                            </HBox>
+                        </children>
+                     </HBox>
+                     <HBox prefWidth="137.5">
+                         <Text fill="black" strokeType="OUTSIDE" text="Device">
+                                <font>
+                                   <Font name="American Typewriter Bold" size="40" />
+                                </font>
+                                <HBox.margin>    
+                                   <Insets bottom="10" left="170" top="20"/>  
+                                </HBox.margin>
+                             </Text>
+                         <Region prefWidth="245" >
+                 
+                            </Region>
+                            <Text fill="black" strokeType="OUTSIDE" text="Travel Options">
+                                <font>
+                                   <Font name="American Typewriter Bold" size="40" />
+                                </font>
+                                <HBox.margin>    
+                                   <Insets bottom="10" left="20" top="20" right="20"/>  
+                                </HBox.margin>
+                             </Text>
+                     </HBox>
+                     <HBox prefWidth="137.5"> 
+                         <HBox>
+                             <fx:define>
+                                        <ToggleGroup fx:id="Devices"/>
+                             </fx:define>
+                             <children>
+                                 <Region prefWidth="145" >
+                                 </Region>
+                                    <RadioButton text="Ipad" toggleGroup="$Devices" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                    <Region prefWidth="60" >
+                 
+                                    </Region>
+                                    <RadioButton text="Iphone" toggleGroup="$Devices" selected="false">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </RadioButton>
+                                   
+                             </children>
+                         </HBox>
+                         <HBox>
+                         <children>
+                                    <Region prefWidth="255" >
+                 
+                                    </Region>
+                                    <CheckBox text="Train" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>   
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </CheckBox>
+                                    <Region prefWidth="25" >
+                 
+                                    </Region>
+                                    <CheckBox text="Bus" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </CheckBox>
+                                    <Region prefWidth="25" >
+                 
+                                    </Region>
+                                    <CheckBox text="Road" selected="true">
+                                        <HBox.margin>
+                                            <Insets top="25.0" />
+                                        </HBox.margin>  
+                                           <font>
+                                               <Font name="AppleGothic Regular" size="16.0" />
+                                           </font>
+                                    </CheckBox>
+                                </children>
+                         </HBox>    
+                     </HBox>
+             </VBox>   
+      </HBox>
+      <HBox id="bottom" prefHeight="163.0" style="-fx-background-color: #B3B3B3;">
+         <children>
+             <Region prefHeight="212" prefWidth="330" >
+                 
+             </Region>
+             <Text fill="#FFFFFF" strokeType="OUTSIDE" text="Copyright © 2016 Weather World">
+                <font>
+                   <Font name="American Typewriter Bold" size="20" />
+                </font>
+                <HBox.margin>    
+                   <Insets bottom="10" left="20" top="32.5" right="20"/>  
+                </HBox.margin>
+             </Text>   
+         </children>
+      </HBox>
+   </children>
+</VBox>

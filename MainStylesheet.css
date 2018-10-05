@@ -1,0 +1,23 @@
+#eiffelsunny{
+    
+    -fx-background-image: url("eiffelsun.gif");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+}
+
+#londonsunny{
+    
+    -fx-background-image: url("londonsun.gif");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+}
+
+#londoncloudynight{
+    
+    -fx-background-image: url("londoncloudnight.gif");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+}

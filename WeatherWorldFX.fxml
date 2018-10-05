@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<ScrollPane  xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="1024" prefHeight="768.0" prefWidth="1024.0" fx:controller="WeatherWorld.WeatherWorldController" >
+   <content>
+        <VBox id="MainVBox"  maxWidth="1005" xmlns:fx="http://javafx.com/fxml/1" >
+           <children>
+               <HBox id="TopBar" prefHeight="130" style="-fx-background-color: #B3B3B3;">
+                   <children>
+                       <Text fill="#FFFFFF" fx:id="temprature" strokeType="OUTSIDE" text="">
+                             <font>
+                                <Font name="American Typewriter Bold" size="50" />
+                             </font>
+                             <HBox.margin>
+                                <Insets bottom="20" left="20" top="20" right="20"/>
+                             </HBox.margin>
+                       </Text>
+                       <Region prefHeight="212" prefWidth="85">
+
+                       </Region>
+                       <Text fill="#FFFFFF" fx:id="location" strokeType="OUTSIDE" text="">
+                             <font>
+                                <Font name="American Typewriter Bold" size="80" />
+                             </font>
+                             <HBox.margin>
+                                <Insets bottom="10" left="20" top="20" right="20"/>
+                             </HBox.margin>
+                       </Text>
+                       <Region prefHeight="212" prefWidth="60" >
+
+                       </Region>
+                       <VBox prefHeight="212" prefWidth="200">
+                            <children> 
+                                <Text fill="#FFFFFF" fx:id="time" strokeType="OUTSIDE" text="">
+                                     <font>
+                                        <Font name="American Typewriter Bold" size="30" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets left="0" top="20" right="5"/>
+                                    </VBox.margin>
+                                </Text>
+                                <Text fill="#FFFFFF" fx:id="date" strokeType="OUTSIDE" text="">
+                                     <font>
+                                        <Font name="American Typewriter Bold" size="30" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="5" left="0" right="5"/>
+                                    </VBox.margin>
+                                </Text>
+                            </children>
+                       </VBox>
+                   </children>
+               </HBox>
+               <VBox id="" fx:id ="Center" prefHeight="475.0" prefWidth="1005.0" stylesheets="@MainStylesheet.css" xmlns:fx="http://javafx.com/fxml/1" style="fx:controller='enlight.EnlightController'">
+                   <Button fx:id="settings" onAction="#settingsbutton" >
+               <VBox.margin>
+                  <Insets bottom="5.0" left="960.0" top="5.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="22.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@settingsbutton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                    </Button>
+                    <Button mnemonicParsing="false" text="" prefHeight="120.0" prefWidth="60.0"  fx:id="RightClick">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="940.0" top="130.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="180.0" fitWidth="42.5" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@forwardbutton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                    </Button>
+                  
+               </VBox>
+               <HBox id="BottomBar" maxWidth="1005" prefHeight="95" style="-fx-background-color: #B3B3B3;">
+                   <children>
+                       <Region prefHeight="212" prefWidth="20" >
+
+                       </Region>
+                       <Text fill="#FFFFFF" fx:id="humidity" strokeType="OUTSIDE" text="">
+                             <font>
+                                <Font name="American Typewriter Bold" size="25" />
+                             </font>
+                             <HBox.margin>
+                                <Insets top="30" left="10" right="10"/>
+                             </HBox.margin>
+                       </Text>
+                       <Region prefHeight="212" prefWidth="20">
+
+                       </Region>
+                       <Text fill="#FFFFFF" fx:id="wind" strokeType="OUTSIDE" text="">
+                             <font>
+                                <Font name="American Typewriter Bold" size="25" />
+                             </font>
+                             <HBox.margin>
+                                <Insets top="30" left="10" right="10"/>
+                             </HBox.margin>
+                       </Text>
+                       <Region prefHeight="212" prefWidth="20" >
+
+                       </Region>
+                       <Text fill="#FFFFFF" id="Rain" strokeType="OUTSIDE" text="Percipitation: 86%">
+                             <font>
+                                <Font name="American Typewriter Bold" size="25" />
+                             </font>
+                             <HBox.margin>
+                                <Insets top="30" left="10" right="10"/>
+                             </HBox.margin>
+                       </Text>
+                       <Region prefHeight="212" prefWidth="20" >
+
+                       </Region>
+                       <Text fill="#FFFFFF" fx:id="Condition" strokeType="OUTSIDE" text="">
+                             <font>
+                                <Font name="American Typewriter Bold" size="25" />
+                             </font>
+                             <HBox.margin>
+                                <Insets top="30" left="10" right="10"/>
+                             </HBox.margin>
+                       </Text>
+
+                   </children>  
+               </HBox>
+               <VBox prefHeight="500" >
+                   <children>
+                       <Text wrappingWidth="1005" textAlignment="CENTER" fill="#111111" strokeType="OUTSIDE" text="Travel Updates">
+                             <font>
+                                <Font name="American Typewriter Bold" size="25" />
+                             </font>
+                             <VBox.margin>
+                                <Insets top="15" />
+                             </VBox.margin>
+                       </Text>
+                       <HBox id="trafficupdates" prefWidth="300" style="fx-background-color: #FFFFFF">
+                           <children>
+                               <VBox id="trainupdates" style="width:220px">
+                                   <children> 
+                                   <Text wrappingWidth="335" textAlignment="CENTER" fill="#111111" strokeType="OUTSIDE" text="Train">
+                                       <font>
+                                          <Font name="American Typewriter" size="25" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15" left="0" />
+                                       </VBox.margin>
+                                   </Text>  
+                                   <javafx.scene.web.WebView fx:id="TFLTrain" maxWidth="300" maxHeight="375" >
+                                       <VBox.margin>
+                                          <Insets top="15" left="25" />
+                                       </VBox.margin>
+                                   </javafx.scene.web.WebView>
+                                   </children>
+                               </VBox>
+                               <VBox id="busupdates" prefWidth="335">
+                                   <children>
+                                       <Text wrappingWidth="335" textAlignment="CENTER" fill="#111111" strokeType="OUTSIDE" text="Bus">
+                                       <font>
+                                          <Font name="American Typewriter" size="25" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15" left="0" />
+                                       </VBox.margin>
+                                       </Text>
+                                       <javafx.scene.web.WebView fx:id="TFLBus" maxWidth="300" maxHeight="375" >
+                                            <VBox.margin>
+                                               <Insets top="15" left="20" />
+                                            </VBox.margin>
+                                        </javafx.scene.web.WebView>
+                                   </children>
+                               </VBox>
+                               <VBox id="roadupdates" prefWidth="335">
+                                   <children>
+                                       <Text wrappingWidth="335" textAlignment="CENTER" fill="#111111" strokeType="OUTSIDE" text="Road">
+                                       <font>
+                                          <Font name="American Typewriter" size="25" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="15" left="0" />
+                                       </VBox.margin>
+                                       </Text>
+                                       <javafx.scene.web.WebView fx:id="TFLCar" maxWidth="300" maxHeight="375" >
+                                       <VBox.margin>
+                                          <Insets top="15" left="20" />
+                                       </VBox.margin>
+                                       </javafx.scene.web.WebView>
+                                   </children>
+                               </VBox>
+                           </children>
+                       </HBox>
+                   </children>
+               </VBox>
+           </children>
+        </VBox>
+   </content>
+</ScrollPane>
